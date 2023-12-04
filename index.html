@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board Games Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    input {
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Board Games Website</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to our Board Games Website!</h2>
+    <p>This is a place where you can explore and enjoy various board games.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are passionate about bringing people together through the joy of playing board games.</p>
+  </section>
+
+  <section id="games">
+    <h2>Featured Games</h2>
+    <p>Explore our collection of exciting board games.</p>
+    <button onclick="showGameDetails()">Show Game Details</button>
+    <div id="gameDetails" style="display: none;">
+      <p>Game Name: Monopoly</p>
+      <p>Description: A classic real estate trading game.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Board Games Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showGameDetails() {
+      var gameDetails = document.getElementById("gameDetails");
+      gameDetails.style.display = (gameDetails.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
